@@ -7,10 +7,11 @@
 >
 <a routerLink="/checkin/select" routerLinkActive="active">Checkin Select</a>
 
-<div>Route Events</div>
-<ngx-json-viewer
-  [json]="flowManager.flowState | async"
-  [expanded]="true"
-></ngx-json-viewer>
-
+<div>
+  Route Events
+  <ngx-json-viewer
+    [json]="flowManager.flowState | async"
+    [expanded]="false"
+  ></ngx-json-viewer>
+</div>
 <router-outlet></router-outlet>

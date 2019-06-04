@@ -1,4 +1,16 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<a routerLink="/booking/passengers" routerLinkActive="active"
+  >Booking Passengers</a
+>
+<a routerLink="/booking/select" routerLinkActive="active">Booking Select</a>
+<a routerLink="/checkin/passengers" routerLinkActive="active"
+  >Checkin Passengers</a
+>
+<a routerLink="/checkin/select" routerLinkActive="active">Checkin Select</a>
+
+<div>Route Events</div>
+<ngx-json-viewer
+  [json]="flowManager.flowState | async"
+  [expanded]="true"
+></ngx-json-viewer>
+
+<router-outlet></router-outlet>
